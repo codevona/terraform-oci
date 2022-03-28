@@ -32,7 +32,7 @@ resource "oci_core_subnet" "subnet" {
   vcn_id              = oci_core_virtual_network.network.id
   cidr_block          = cidrsubnet(var.vcn_cidr, 8, 1)
   display_name        = "${var.name}-subnet"
-  dns_label           = "${var.name}-subnet"
+  dns_label           = var.name
   route_table_id      = oci_core_route_table.route_table.id
   security_list_ids   = [oci_core_security_list.security_list.id]
 }
