@@ -1,0 +1,9 @@
+# Authentication
+tenancy_ocid   = ""
+ssh_public_key = "~/.ssh/id_rsa.pub"
+
+# Compartment
+compartment_ocid = ""
+
+# Server Name
+name = ""
