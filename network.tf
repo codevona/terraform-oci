@@ -1,7 +1,7 @@
 # Network
 resource "oci_core_virtual_network" "network" {
   display_name   = "${var.name}-network"
-  dns_label      = "${var.name}-network"
+  dns_label      = var.name
   cidr_block     = var.vcn_cidr
   compartment_id = var.compartment_ocid
 }
