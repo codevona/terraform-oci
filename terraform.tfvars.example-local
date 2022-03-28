@@ -1,0 +1,15 @@
+# Authentication
+tenancy_ocid     = ""
+user_ocid        = ""
+fingerprint      = ""
+private_key_path = ""
+region           = ""
+
+# File
+ssh_public_key = ""
+
+# Compartment
+compartment_ocid = ""
+
+# Server Name
+name = ""

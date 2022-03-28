@@ -9,10 +9,14 @@ resource "oci_core_instance" "mongo" {
     subnet_id    = oci_core_subnet.subnet.id
   }
 
+  shape_config {
+    memory_in_gbs = 8
+    ocpus         = 2
+  }
+
   source_details {
-    source_type             = "image"
-    source_id               = lookup(data.oci_core_images.compute_images.images[0], "id")
-    boot_volume_size_in_gbs = "50"
+    source_type = "image"
+    source_id   = lookup(data.oci_core_images.compute_images.images[0], "id")
   }
 
   metadata = {
